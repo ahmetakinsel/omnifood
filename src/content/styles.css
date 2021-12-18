@@ -55,7 +55,18 @@ Medium: 11px
 - Spacing system (px)
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 */
+/* <------------ Helpers ------------> */
 
+.grid-col-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  max-width: 1300px;
+  /*gap: 10px;
+  margin: 0 auto;
+  padding: 0 auto;
+  align-items: center;
+  gap: 24px;*/
+}
 * {
   padding: 0;
   margin: 0;
@@ -102,6 +113,11 @@ body {
   color: #111;
   transition: all 0.4s;
 }
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .nav-link {
+    display: none;
+  }
+}
 .nav-link:hover {
   color: #e67e22;
 }
@@ -131,28 +147,54 @@ body {
 /* < ------------ HERO SECTION ------------ > */
 .section-hero {
   padding: 36px 10px 96px 10px;
-  background: linear-gradient(#fdf2e9, #fae5d3, #fae5d3, #eb984e);
+  background: linear-gradient(#fdf2e9, #fae5d3, #eb984e);
 }
 
 .hero {
-  /*display:flex*/
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
+  gap: 20px;
   max-width: 1300px;
-  gap: 10px;
   margin: 0 auto;
-  /*padding: 0 auto;*/
   align-items: center;
-  gap: 24px;
 }
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .hero {
+    display: block;
+  }
+}
+/*@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+  .hero {
+    display: block; iphone 6/7/8
+  }
+}
+@media only screen and (min-device-width: 441px) and (max-device-width: 736px) {
+  .hero {
+    display: block; iphone 6/7/8+
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .hero {
+    display: block; ipad
+  }
+  @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) {
+  .hero {
+    display: block; ipadPro
+  
+}*/
 .header-primary {
   font-size: 34px;
   font-weight: 700;
   letter-spacing: 3px;
-  margin-bottom: 52px;
+  margin-bottom: 30px;
   line-height: 30px;
   text-align: start;
   color: #333;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .hero .hero-description {
+    margin-bottom: 15px;
+  }
 }
 
 .hero-description {
@@ -222,6 +264,13 @@ body {
   text-align: center;
   margin-bottom: 30px;
 }
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .hero,
+  .hero-description,
+  .delivered-subheader {
+    margin-top: 15px;
+  }
+}
 
 .delivered-imgs {
   display: flex;
@@ -279,11 +328,23 @@ body {
   justify-content: space-between;
   gap: 20px;
 }
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .logos {
+    display: grid;
+    justify-items: center;
+  }
+}
 
 .logos img {
   height: 32px;
   filter: brightness(0);
   opacity: 50%;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .logos img {
+    height: 28px;
+    gap: 20px;
+  }
 }
 
 /* < ------------- HOW IT WORKS SECTION ------------ > */
@@ -307,6 +368,12 @@ body {
   text-align: start;
   color: #333;
 }
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .subheading {
+    display: flex;
+    justify-content: center;
+  }
+}
 
 .heading-secondary {
   font-size: 40px;
@@ -316,6 +383,12 @@ body {
   text-align: start;
   color: #333;
   margin-top: 15px;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .heading-secondary {
+    font-size: large;
+    text-align: center;
+  }
 }
 
 .heading-secondary span {
@@ -331,6 +404,15 @@ body {
   margin-top: 50px;
   margin-bottom: 50px;
   gap: 24px;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .section-how,
+  .steps {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+  }
 }
 
 .steps:first-child {
@@ -349,7 +431,12 @@ body {
   margin-bottom: 20px;
   font-weight: 600;
 }
-
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .step-number {
+    display: flex;
+    justify-content: center;
+  }
+}
 .heading-tertiary {
   font-size: 32px;
   font-weight: 600;
@@ -358,6 +445,12 @@ body {
   color: #333;
   margin-bottom: 15px;
 }
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .heading-tertiary {
+    text-align: center;
+  }
+}
+
 .step-description {
   font-size: 16px;
   font-weight: 500;
@@ -367,10 +460,22 @@ body {
   color: #333;
   margin-top: 15px;
 }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .step-description {
+    text-align: center;
+    margin-left: 5px;
+  }
+}
 .step-img-box {
   display: flex;
   justify-content: center;
   position: relative;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .step-img-box {
+    display: none;
+  }
 }
 
 .step-img-box::after {
