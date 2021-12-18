@@ -106,7 +106,8 @@ body {
   color: #e67e22;
 }
 .nav-link:first-child {
-  margin-left: 0px; /*-5px*/
+  margin-left: 0px;
+  letter-spacing: -0.6px;
 }
 
 .nav-cta {
@@ -129,9 +130,8 @@ body {
 
 /* < ------------ HERO SECTION ------------ > */
 .section-hero {
-  /* background-color: #fdf2e9;*/
   padding: 36px 10px 96px 10px;
-  background: linear-gradient(#fdf2e9, #fae5d3, #eb984e);
+  background: linear-gradient(#fdf2e9, #fae5d3, #fae5d3, #eb984e);
 }
 
 .hero {
@@ -227,7 +227,6 @@ body {
   display: flex;
   justify-content: center;
 }
-/*--- decended selector ---*/
 .delivered-imgs img {
   display: flex;
   width: 34px;
@@ -249,9 +248,11 @@ body {
   color: #e67e22;
 }
 
-/* < ------------- SECOND SECTION ------------ > */
+/* < ------------- FEATURE SECTION ------------ > */
 .section-featured {
-  max-width: 1300px;
+  margin: 0px;
+  padding: 0px;
+  margin-top: 40px;
 }
 
 .heading-featured-in-wrapper {
@@ -275,7 +276,7 @@ body {
 
 .logos {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   gap: 20px;
 }
 
@@ -328,18 +329,25 @@ body {
   padding: 0 32px;
   margin: 0 auto;
   margin-top: 50px;
+  margin-bottom: 50px;
   gap: 24px;
 }
 
-/*how to locate only one grid*/
+.steps:first-child {
+  margin-top: 50px;
+}
+
+/* check how to locate only one grid*/
 .step-text-box {
   gap: 50px;
   margin-top: 50px;
 }
+
 .step-number {
   font-size: 86px;
   color: #e67e22;
   margin-bottom: 20px;
+  font-weight: 600;
 }
 
 .heading-tertiary {
@@ -358,16 +366,31 @@ body {
   text-align: start;
   color: #333;
   margin-top: 15px;
-  /* font-size: 16px;
-  font-weight: 600;
-  letter-spacing: 0.8px;
-  line-height: 24px;
-  text-align: start;*/
 }
 .step-img-box {
   display: flex;
   justify-content: center;
+  position: relative;
 }
+
+.step-img-box::after {
+  content: "";
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.step-img-box::after {
+  width: 60%;
+  padding-bottom: 60%;
+  background: linear-gradient(#eb984e, #fae5d3, #fdf2e9);
+  z-index: -2;
+}
+
 .step-img {
   width: 200px;
+  height: 400px;
 }
