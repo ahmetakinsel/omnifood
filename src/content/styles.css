@@ -520,11 +520,9 @@ body {
 }
 
 /* <------------ MEALS SECTION ------------> */
-
 .section-meals {
-  display: flex;
+  padding: 96px 0px;
 }
-
 .container-meal-headers {
   text-align-last: center;
   margin-bottom: 30px;
@@ -533,10 +531,31 @@ body {
   color: #e67e22;
 }
 .meal {
-  border-radius: 30px;
   overflow: hidden;
   transition: all 0.4s;
 }
 .meal-img {
   width: 100%;
+}
+.meal-content {
+}
+
+.meal-tags {
+}
+.meal-title {
+  font-size: 24px;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.meal-attributes {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 14px;
+}
+
+.meal-attribute {
+}
+.meal-icon {
 }
