@@ -532,7 +532,11 @@ body {
 .container-meal-headers span {
   color: #e67e22;
 }
-
+.meal {
+  border-radius: 30px;
+  overflow: hidden;
+  transition: all 0.4s;
+}
 .meal-img {
   width: 100%;
 }
