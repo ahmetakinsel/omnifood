@@ -61,11 +61,11 @@ Medium: 11px
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   max-width: 1300px;
-  /*gap: 10px;
+  justify-items: center;
+  gap: 15px;
   margin: 0 auto;
   padding: 0 auto;
   align-items: center;
-  gap: 24px;*/
 }
 * {
   padding: 0;
@@ -96,6 +96,11 @@ body {
   height: 96px;
   padding: 0 32px;
   align-items: center;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .header {
+    padding: 0px 8px;
+  }
 }
 
 /* < ------------ NAVIGATION ----------- > */
@@ -512,4 +517,22 @@ body {
 .step-img {
   width: 200px;
   height: 400px;
+}
+
+/* <------------ MEALS SECTION ------------> */
+
+.section-meals {
+  display: flex;
+}
+
+.container-meal-headers {
+  text-align-last: center;
+  margin-bottom: 30px;
+}
+.container-meal-headers span {
+  color: #e67e22;
+}
+
+.meal-img {
+  width: 100%;
 }
